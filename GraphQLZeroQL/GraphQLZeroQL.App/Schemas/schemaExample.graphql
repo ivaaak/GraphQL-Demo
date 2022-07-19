@@ -1,0 +1,25 @@
+schema {
+  query: Query
+  mutation: Mutation
+}
+
+type Query {
+  me: User!
+  user(id: Int!): User
+}
+
+type Mutation {
+  addUser(firstName: String!, lastName: String!): User!
+}
+
+type User {
+  id: Int!
+  firstName: String!
+  lastName: String!
+  role: Role!
+}
+
+type Role {
+  id: Int!
+  name: String!
+}
